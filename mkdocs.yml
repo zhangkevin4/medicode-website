@@ -31,15 +31,39 @@ theme:
     - navigation.footer # explicitly adds footer prev/next (Material4MkDocs9.0)
     - navigation.instant
     - navigation.tabs
+    - search.suggest #enhance search
+    - search.highlight #search highlighting
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - header.autohide
     # - toc.integrate
   palette:
-    scheme: dark
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+
+
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
   font:
     text: Montserrat
     code: Roboto Mono
+
 
 markdown_extensions:
   - admonition
@@ -60,4 +84,5 @@ extra:
       link: https://twitter.com/medic_ode
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/medic_ode/
+
 
